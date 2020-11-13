@@ -1,1 +1,7 @@
 /* Reset rules */
+
+body {
+  width: 1360px;
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+}

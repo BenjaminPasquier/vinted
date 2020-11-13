@@ -1,1 +1,153 @@
 /* Other rules */
+
+/* 
+**********************
+HEADER 
+********************** 
+*/
+
+.header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.header img {
+  height: 30px;
+  width: auto;
+  margin-left: 80px;
+}
+
+.header button:not(:nth-child(2)) {
+  color: #4ab1ba;
+  background-color: white;
+  height: 30px;
+  width: 115px;
+  border: solid 1px #4ab1ba;
+  border-radius: 5px;
+  outline: none;
+}
+
+.header button:nth-child(2) {
+  color: white;
+  background-color: #4ab1ba;
+  height: 30px;
+  width: 120px;
+  border: solid 1px #4ab1ba;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 70px;
+}
+
+.header .buttons {
+  display: flex;
+}
+
+.login {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 
+*******************
+INTRO 
+******************* 
+*/
+
+.intro {
+  height: 460px;
+  width: 100%;
+  margin-left: 80px;
+}
+
+.intro div {
+  height: 220px;
+  width: 360px;
+  border: lightgray solid 1px;
+  border-radius: 5px;
+  margin: 75px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 25px;
+}
+
+.intro div p {
+  font-size: 34px;
+}
+
+.intro div button {
+  padding: 15px;
+  background-color: #4ab1ba;
+  color: white;
+  border: solid #4ab1ba 1px;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* 
+*****************
+OFFRES
+***************** 
+*/
+
+.offers {
+  margin: 0 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.offer {
+  height: 500px;
+  width: 235px;
+  border: lightgray solid 1px;
+  margin-bottom: 10px;
+}
+
+.offer div:nth-child(1) {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.offer div:nth-child(1) img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.offer div:nth-child(2) {
+  height: 360px;
+  width: 100%;
+}
+
+.offer div:nth-child(2) img {
+  height: 100%;
+  width: 100%;
+}
+
+.offer div:nth-child(3) {
+  height: 58px;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.offer div:nth-child(3) > p {
+  height: 5px;
+  font-size: 12px;
+}
