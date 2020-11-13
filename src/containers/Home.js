@@ -34,12 +34,12 @@ const Home = () => {
           return (
             <section className="offer">
               <div>
-                <img src="{offer.owner.account.avatar.secure_url}" />
+                <img src={offer.owner.account.avatar.secure_url} />
                 <p>{offer.owner.account.username}</p>
               </div>
               <div>
                 <Link to={`/offer/${offer._id}`} key={offer._id}>
-                  <img src="{offer.product_pictures.url}" />
+                  <img src={offer.product_pictures.secure_url} />
                 </Link>
               </div>
               <div>

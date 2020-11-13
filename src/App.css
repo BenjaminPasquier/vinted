@@ -102,16 +102,17 @@ OFFRES
 */
 
 .offers {
-  margin: 0 80px;
+  margin-left: 80px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: left;
 }
 
 .offer {
   height: 500px;
   width: 235px;
   border: lightgray solid 1px;
+  margin-right: 12px;
   margin-bottom: 10px;
 }
 

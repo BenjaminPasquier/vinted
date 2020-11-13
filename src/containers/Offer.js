@@ -7,7 +7,6 @@ const Offer = () => {
     <div>
       <Header />
       Offer
-      <Link to="/">HomePage</Link>
     </div>
   );
 };
