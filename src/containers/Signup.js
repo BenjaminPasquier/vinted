@@ -55,7 +55,7 @@ const Signup = ({ setUser }) => {
         />{" "}
         <br />
         <input
-          type="paswword"
+          type="password"
           placeholder="Password"
           value={password}
           onChange={(event) => {
