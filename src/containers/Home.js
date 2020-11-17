@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
-import Header from "../components/Header";
+import backgroundVinted from "../img/backgroundVinted.png";
+import defaultPicture from "../img/defaultPicture.png";
+import defaultNoPicture from "../img/defaultNoPicture.png";
 
 const Home = () => {
-  const [data, setData] = useState({ useState });
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
@@ -21,31 +22,44 @@ const Home = () => {
     <p>Loading...</p>
   ) : (
     <div>
-      <Header />
+      {/* <section className="background"> */}
       <section className="intro">
         <div>
           <p>Prêts à faire du tri dans vos placards ?</p>
           <button>Commencez à vendre</button>
         </div>
       </section>
-      {/* <Link to={"/offer"}>Go to Offer</Link> */}
+      {/* </section> */}
       <section className="offers">
         {data.offers.map((offer, index) => {
           return (
             <section className="offer">
               <div>
-                <img src={offer.owner.account.avatar.secure_url} />
-                <p>{offer.owner.account.username}</p>
+                {offer.owner.account.avatar ? (
+                  <div>
+                    <img src={offer.owner.account.avatar.secure_url} />
+                    <p>{offer.owner.account.username}</p>
+                  </div>
+                ) : (
+                  <div>
+                    <img src={defaultPicture} />
+                    <p>{offer.owner.account.username}</p>
+                  </div>
+                )}
               </div>
               <div>
                 <Link to={`/offer/${offer._id}`} key={offer._id}>
-                  <img src={offer.product_pictures.secure_url} />
+                  {offer.product_pictures[0] ? (
+                    <img src={offer.product_pictures[0].secure_url} />
+                  ) : (
+                    <img src={defaultNoPicture} />
+                  )}
                 </Link>
               </div>
               <div>
                 <p>{offer.product_price} €</p>
-                <p>TAILLES</p>
-                <p>MARQUE</p>
+                <p>{offer.product_details[1].TAILLE}</p>
+                <p>{offer.product_details[0].MARQUE}</p>
               </div>
             </section>
           );

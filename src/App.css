@@ -46,7 +46,7 @@ HEADER
   display: flex;
 }
 
-.login {
+.menu {
   width: 250px;
   display: flex;
   justify-content: space-between;
@@ -57,6 +57,12 @@ HEADER
 INTRO 
 ******************* 
 */
+/* .background {
+  background-image: url("./img/backgroundVinted.png");
+  background-repeat: no-repeat;
+  background-size:  460px;
+  background-position: 0 -50px;
+} */
 
 .intro {
   height: 460px;
@@ -75,6 +81,7 @@ INTRO
   justify-content: space-around;
   align-items: flex-start;
   padding: 25px;
+  background-color: white;
 }
 
 .intro div p {
@@ -111,22 +118,24 @@ OFFRES
 .offer {
   height: 500px;
   width: 235px;
-  border: lightgray solid 1px;
+
   margin-right: 12px;
   margin-bottom: 10px;
 }
 
 .offer div:nth-child(1) {
   width: 100%;
-  height: 70px;
+  height: 50px;
   display: flex;
   justify-content: left;
   align-items: center;
+  color: gray;
+  font: 16px;
 }
 
-.offer div:nth-child(1) img {
-  height: 50px;
-  width: 50px;
+.offer div:nth-child(1) div img {
+  height: 25px;
+  width: 25px;
   border-radius: 50px;
   margin-right: 10px;
   margin-left: 10px;
@@ -138,17 +147,154 @@ OFFRES
 }
 
 .offer div:nth-child(2) img {
-  height: 100%;
+  height: 360px;
   width: 100%;
 }
 
 .offer div:nth-child(3) {
   height: 58px;
   width: 100%;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .offer div:nth-child(3) > p {
   height: 5px;
+  font-size: 16px;
+}
+
+.offer div:nth-child(3) p:not(:nth-child(1)) {
+  color: gray;
   font-size: 12px;
+}
+
+.offerResult {
+  width: 1440px;
+  height: 680px;
+  background-color: lightgray;
+}
+
+/* 
+*******************
+SIGNUP
+*******************
+ */
+
+.signup {
+  height: 740px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 50px 80px 0px 40px;
+}
+
+.signup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup h2 {
+  margin-bottom: 40px;
+}
+
+.signup form input:not(:nth-child(7)) {
+  background-color: white;
+  border: none;
+  border-bottom: salmon solid 1px;
+  height: 30px;
+  width: 300px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  outline: none;
+}
+
+.signup form input:nth-child(7) {
+  background-color: #4ab1ba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height: 45px;
+  margin-top: 30px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.signup form input:nth-child(7):hover {
+  outline: none;
+  cursor: pointer;
+}
+
+.signup form input:not(:nth-child(7)):hover {
+  outline: none;
+}
+
+.signup p {
+  color: #4ab1ba;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+/* 
+********************
+LOGIN 
+********************
+ */
+
+.login {
+  height: 740px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 50px 80px 0px 40px;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login h2 {
+  margin-bottom: 40px;
+}
+
+.login form input:not(:nth-child(5)) {
+  background-color: white;
+  border: none;
+  border-bottom: salmon solid 1px;
+  height: 30px;
+  width: 300px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  outline: none;
+}
+
+.login form input:nth-child(5) {
+  background-color: #4ab1ba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height: 45px;
+  margin-top: 30px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.login form input:nth-child(5):hover {
+  outline: none;
+  cursor: pointer;
+}
+
+.login form input:not(:nth-child(5)):hover {
+  outline: none;
+}
+
+.login p {
+  color: #4ab1ba;
+  font-size: 16px;
+  text-decoration: underline;
 }

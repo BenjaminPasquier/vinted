@@ -20,7 +20,7 @@ const Header = ({ token, setUser }) => {
               Se déconnecter
             </button>
           ) : (
-            <div className="login">
+            <div className="menu">
               <Link to="/signup">
                 <button>S'inscrire</button>
               </Link>
