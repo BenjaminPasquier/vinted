@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import defaultNoPicture from "../img/defaultNoPicture.png";
 
 const Offer = () => {
@@ -23,18 +23,28 @@ const Offer = () => {
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <div className="offerPage">
-      <p>{data.product_name}</p>
-      <p>Cette page est en travaux</p>
-      {/* <section className="offerResult">
-        {data.id.map((offer, index) => {
+    <div>
+      <section className="offerResult">
+        <div>
+          {/* {data.id.map((offer, index) => {
           return offer.product_pictures[0] ? (
             <img src={offer.product_pictures[0].secure_url} />
           ) : (
             <img src={defaultNoPicture} />
           );
-        })}
-      </section> */}
+        })} */}
+        </div>
+        <div>
+          <div>
+            <p>Cette page est en travaux</p>
+          </div>
+          <div>
+            <Link to="/payment">
+              <button>Acheter</button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

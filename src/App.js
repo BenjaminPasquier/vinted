@@ -8,6 +8,7 @@ import Offer from "./containers/Offer";
 import Signup from "./containers/Signup";
 import Login from "./containers/Login";
 import Cookie from "js-cookie";
+import Payment from "./containers/Payment";
 
 function App() {
   const [token, setToken] = useState(Cookie.get("userToken") || null);
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login setUser={setUser} />
+        </Route>
+        <Route path="/payment">
+          <Payment />
         </Route>
         <Route path="/">
           <Home />

@@ -167,12 +167,6 @@ OFFRES
   font-size: 12px;
 }
 
-.offerResult {
-  width: 1440px;
-  height: 680px;
-  background-color: lightgray;
-}
-
 /* 
 *******************
 SIGNUP
@@ -297,4 +291,39 @@ LOGIN
   color: #4ab1ba;
   font-size: 16px;
   text-decoration: underline;
+}
+
+/* 
+**************************
+PAGE OFFRE
+**************************
+ */
+
+.offerResult {
+  width: 1440px;
+  height: 730px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.offerResult > div:nth-child(2) {
+  height: 605px;
+  width: 400px;
+  background-color: white;
+}
+
+.offerResult div > div {
+  margin: 40px;
+}
+
+.offerResult button {
+  background-color: #4ab1ba;
+  color: white;
+  height: 36px;
+  width: 320px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
 }
