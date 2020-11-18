@@ -30,7 +30,11 @@ const Header = ({ token, setUser }) => {
             </div>
           )}
         </div>
-        <button>Vends tes articles</button>
+        <div>
+          <Link to="/publish">
+            <button>Vends tes articles</button>
+          </Link>
+        </div>
       </section>
     </section>
   );

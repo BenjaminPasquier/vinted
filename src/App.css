@@ -8,7 +8,7 @@ HEADER
 
 .header {
   height: 60px;
-  width: 100%;
+  width: 1360px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,7 +21,7 @@ HEADER
   margin-left: 80px;
 }
 
-.header button:not(:nth-child(2)) {
+.buttons div:nth-child(1) button {
   color: #4ab1ba;
   background-color: white;
   height: 30px;
@@ -31,7 +31,7 @@ HEADER
   outline: none;
 }
 
-.header button:nth-child(2) {
+.buttons div:nth-child(2) button {
   color: white;
   background-color: #4ab1ba;
   height: 30px;
@@ -39,17 +39,19 @@ HEADER
   border: solid 1px #4ab1ba;
   border-radius: 5px;
   outline: none;
-  margin-left: 70px;
+  /* margin-left: 70px; */
 }
 
 .header .buttons {
   display: flex;
+  align-items: center;
 }
 
 .menu {
   width: 250px;
   display: flex;
   justify-content: space-between;
+  margin-right: 70px;
 }
 
 /* 
@@ -57,17 +59,18 @@ HEADER
 INTRO 
 ******************* 
 */
-/* .background {
+.background {
+  margin-bottom: 10px;
   background-image: url("./img/backgroundVinted.png");
   background-repeat: no-repeat;
-  background-size:  460px;
-  background-position: 0 -50px;
-} */
+  background-size: 1440px 460px;
+}
 
 .intro {
   height: 460px;
   width: 100%;
   margin-left: 80px;
+  padding-top: 75px;
 }
 
 .intro div {
@@ -75,11 +78,10 @@ INTRO
   width: 360px;
   border: lightgray solid 1px;
   border-radius: 5px;
-  margin: 75px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: space-around;
   padding: 25px;
   background-color: white;
 }
@@ -312,10 +314,21 @@ PAGE OFFRE
   height: 605px;
   width: 400px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
 }
 
-.offerResult div > div {
-  margin: 40px;
+.offerResult div section:nth-child(1) div {
+  height: 210px;
+  width: 320px;
+  line-height: 12px;
+}
+
+.description section:nth-child(1) > div:nth-child(1) {
+  border-bottom: lightgray solid 2px;
 }
 
 .offerResult button {
@@ -326,4 +339,174 @@ PAGE OFFRE
   outline: none;
   border-radius: 5px;
   border: none;
+  font-size: 16px;
+}
+
+.description section div section {
+  display: flex;
+}
+
+.description > section > div:nth-child(1) > p:nth-child(1) {
+  font-size: 30px;
+  line-height: 12px;
+}
+
+.description section div section div:nth-child(1) {
+  color: #4ab1ba;
+}
+
+.description img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.description > section:nth-child(1) > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+}
+.description > section:nth-child(1) > div:nth-child(2) span {
+  display: flex;
+  align-items: center;
+}
+
+.description > section:nth-child(1) > div:nth-child(2) p:nth-child(1) {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.photo img {
+  height: 605px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* 
+************************
+PAGE PUBLISH
+************************
+ */
+
+.publish {
+  background-color: lightgray;
+  padding: 20px 80px;
+}
+
+.fileDiv {
+  height: 250px;
+  width: 1280px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: solid grey 1px;
+}
+
+.productName {
+  width: 1280px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border: solid grey 1px;
+  border-radius: 10px;
+}
+
+.productName > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.productName > div:nth-child(2) {
+  line-height: 30px;
+  font-size: 16px;
+  margin-right: 300px;
+}
+
+.productName > div:nth-child(2) input {
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.productName > div:nth-child(2) input:hover {
+  outline: none;
+}
+
+.infos {
+  width: 1280px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border: solid grey 1px;
+  border-radius: 10px;
+}
+
+.infos > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  line-height: 35px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.infos > div:nth-child(2) {
+  line-height: 30px;
+  font-size: 16px;
+  margin-right: 450px;
+}
+
+.infos > div:nth-child(2) input {
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.infos > div:nth-child(2) input:hover {
+  outline: none;
+}
+
+.prix {
+  width: 1280px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border: solid grey 1px;
+  border-radius: 10px;
+}
+
+.prix > div:nth-child(1) {
+  line-height: 35px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.prix > div:nth-child(2) {
+  line-height: 30px;
+  font-size: 16px;
+  margin-right: 275px;
+}
+
+.prix > div:nth-child(2) input {
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.publish button {
+  background-color: #4ab1ba;
+  color: white;
+  height: 36px;
+  width: 320px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin-top: 50px;
+  margin-left: 960px;
 }

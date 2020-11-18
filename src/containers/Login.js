@@ -46,7 +46,7 @@ const Login = ({ setUser }) => {
           type="password"
           placeholder="Password"
           value={password}
-          onchange={(event) => {
+          onChange={(event) => {
             setPassword(event.target.value);
           }}
         />

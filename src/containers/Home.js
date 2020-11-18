@@ -22,14 +22,16 @@ const Home = () => {
     <p>Loading...</p>
   ) : (
     <div>
-      {/* <section className="background"> */}
-      <section className="intro">
-        <div>
-          <p>Prêts à faire du tri dans vos placards ?</p>
-          <button>Commencez à vendre</button>
-        </div>
+      <section className="background">
+        <section className="intro">
+          <div>
+            <p>Prêts à faire du tri dans vos placards ?</p>
+            <Link to="/publish">
+              <button>Commencez à vendre</button>
+            </Link>
+          </div>
+        </section>
       </section>
-      {/* </section> */}
       <section className="offers">
         {data.offers.map((offer, index) => {
           return (

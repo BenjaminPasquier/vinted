@@ -9,6 +9,7 @@ import Signup from "./containers/Signup";
 import Login from "./containers/Login";
 import Cookie from "js-cookie";
 import Payment from "./containers/Payment";
+import Publish from "./containers/Publish";
 
 function App() {
   const [token, setToken] = useState(Cookie.get("userToken") || null);
@@ -26,7 +27,7 @@ function App() {
     <Router>
       <Header token={token} setUser={setUser} />
       <Switch>
-        <Route path="/offer">
+        <Route path="/offer/:id">
           <Offer />
         </Route>
         <Route path="/signup">
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login setUser={setUser} />
+        </Route>
+        <Route path="/publish">
+          <Publish token={token} />
         </Route>
         <Route path="/payment">
           <Payment />

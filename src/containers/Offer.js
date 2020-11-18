@@ -6,7 +6,7 @@ import defaultNoPicture from "../img/defaultNoPicture.png";
 const Offer = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,24 +25,44 @@ const Offer = () => {
   ) : (
     <div>
       <section className="offerResult">
-        <div>
-          {/* {data.id.map((offer, index) => {
-          return offer.product_pictures[0] ? (
-            <img src={offer.product_pictures[0].secure_url} />
-          ) : (
-            <img src={defaultNoPicture} />
-          );
-        })} */}
+        <div className="photo">
+          <img src={data.product_pictures[0].secure_url} />
         </div>
-        <div>
-          <div>
-            <p>Cette page est en travaux</p>
-          </div>
-          <div>
+        <div className="description">
+          <section>
+            <div>
+              <p>{data.product_price} €</p>
+              <section>
+                <div>
+                  <p>MARQUE</p>
+                  <p>TAILLE</p>
+                  <p>ETAT</p>
+                  <p>COULEUR</p>
+                  <p>EMPLACEMENT</p>
+                </div>
+                <div>
+                  <p>{data.product_details[0].MARQUE}</p>
+                  <p>{data.product_details[1].TAILLE}</p>
+                  <p>{data.product_details[2].ÉTAT}</p>
+                  <p>{data.product_details[3].COULEUR}</p>
+                  <p>{data.product_details[4].EMPLACEMENT}</p>
+                </div>
+              </section>
+            </div>
+            <div>
+              <p>{data.product_name}</p>
+              <p>{data.product_description}</p>
+              <span>
+                <img src={data.owner.account.avatar.secure_url} />
+                <p>{data.owner.account.username} </p>
+              </span>
+            </div>
+          </section>
+          <section>
             <Link to="/payment">
               <button>Acheter</button>
             </Link>
-          </div>
+          </section>
         </div>
       </section>
     </div>
